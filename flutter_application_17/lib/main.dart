@@ -1,0 +1,34 @@
+import 'dart:developer';
+import 'package:flutter/material.dart';
+void main(){
+  runApp(const MyApp());
+  }
+
+class MyApp extends StatefulWidget{
+const MyApp({super.key});
+
+@override
+State<StatefulWidget>createState(){
+  log('In Create State');
+  return _MyAppState();
+} 
+}
+class _MyAppState extends State<MyApp>{
+
+@override
+  void initState(){
+    super.initState();
+    log('In init State');
+  }
+
+@override
+  Widget build(BuildContext context){
+    return const MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child:Text('Stateful Widget'), 
+            ),
+     )
+     );
+}
+}
